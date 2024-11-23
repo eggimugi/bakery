@@ -177,7 +177,7 @@ const updateOrder = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
-const deleteOrder = async (res: Response, req: Request): Promise<any> => {
+const deleteOrder = async (req: Request, res: Response): Promise<any> => {
   try {
     const { id } = req.params;
 
@@ -207,10 +207,9 @@ const deleteOrder = async (res: Response, req: Request): Promise<any> => {
       message: `Order has been removed`,
     });
   } catch (error) {
-    return res.status(500).json({
-      message: error,
-    });
+    console.log(error);
+    return res.status(500).json(error);
   }
 };
 
-export { createOrder, readOrder, updateOrder };
+export { createOrder, readOrder, updateOrder, deleteOrder };

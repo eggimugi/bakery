@@ -4,7 +4,7 @@ import { createSuppliers, deleteSuppliers, readSuppliers, updateSuppliers } from
 import { verifyToken } from "../middleware/authorization";
 
 const router = Router();
-router.post(`/`, [verifyToken, createSuppliersValidation], createSuppliers);
+router.post(`/`, [createSuppliersValidation], createSuppliers);
 router.get(`/`, [verifyToken], readSuppliers);
 router.put(`/:id`, [verifyToken, updateSuppliersValidation], updateSuppliers);
 router.delete(`/:id`, [verifyToken], deleteSuppliers);

@@ -172,7 +172,6 @@ const updateComposition = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
-
 const deleteComposition = async (req: Request, res: Response): Promise<any> => {
   try {
     const id = req.params.id;
@@ -196,7 +195,7 @@ const deleteComposition = async (req: Request, res: Response): Promise<any> => {
     });
 
     return res.status(200).json({
-      message: `Compositions for cake_id: ${id} have been successfully deleted`
+      message: `Compositions for cake_id: ${id} have been successfully deleted`,
     });
   } catch (error) {
     return res.status(500).json(error);
