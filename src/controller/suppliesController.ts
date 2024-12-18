@@ -169,4 +169,4 @@ const deleteSupplies = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
-export { createSupplies, readSupplies, updateSupplies,  deleteSupplies};
+export { createSupplies, readSupplies, updateSupplies, deleteSupplies };
